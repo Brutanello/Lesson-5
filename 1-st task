@@ -1,0 +1,13 @@
+task_file = open('test.txt', 'w')
+line = input('Введите текст \n')
+while line:
+    task_file.writelines(line)
+    line = input('Введите текст \n')
+    if not line:
+        break
+
+task_file.close()
+task_file = open('test.txt', 'r')
+content = task_file.readlines()
+print(content)
+task_file.close()
